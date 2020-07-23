@@ -1,66 +1,18 @@
 {
 	"info": {
-		"_postman_id": "73110ac3-2796-4caa-b9f7-c19bda2a74be",
-		"name": "Practice ",
+		"_postman_id": "cccf198e-8d4b-4750-a277-dba26578c66f",
+		"name": "Practice  copy",
 		"description": "Коллекция для тестирования игры \"Полицейсике и мошенники\"",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "Create User",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "dd5fe624-9ae8-4f34-bced-0e1a54f1e30b",
-						"exec": [
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
-							"    \r",
-							"pm.test(\"Response time is less than 200ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-							"});\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"Login\": \"gdfdgGDGsdfdfws\",\r\n  \"NativeName\": \"Test User\",\r\n  \"Password\": \"123456\",\r\n  \"ConfirmPassword\": \"123456\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "104.40.150.146/api/user",
-					"host": [
-						"104",
-						"40",
-						"150",
-						"146"
-					],
-					"path": [
-						"api",
-						"user"
-					]
-				}
-			},
-			"response": []
-		},
 		{
 			"name": "Token",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "70ef7693-f049-412b-9481-d4a0b6b2b11f",
+						"id": "3e8ed8c8-365a-49e9-bb8e-cf772862bd69",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
 							"pm.globals.set(\"token\", jsonData.access_token);\r",
@@ -117,7 +69,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "224816b1-6013-42c3-8fca-d475837178b6",
+						"id": "febf6c55-0be7-4ac0-8b7d-8f69d392672c",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
 							"pm.globals.set(\"id_user\", jsonData.id);\r",
@@ -172,7 +124,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "34e149e4-ff61-45ca-837b-4c8c227fa920",
+						"id": "70c77409-11c1-44c2-ac8b-6b399b3a9029",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -229,7 +181,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7b13a97f-eaac-4153-9dc0-2a2c321da631",
+						"id": "c58a8a58-ec21-4534-aa90-f020db8660d7",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -277,7 +229,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "70b0cbe2-eac8-4ba5-9b6e-274074cbeb01",
+						"id": "edaa07a9-3b2c-4e3d-a7a4-c9ac72eddcd5",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -327,7 +279,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2bccd788-520a-48dc-b983-68d517fc8272",
+						"id": "7473a440-94a5-41b9-9d79-002494563eb8",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
 							"pm.globals.set(\"id_game\", jsonData.id);\r",
@@ -379,7 +331,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "0bf651f9-7cc7-4a24-9038-102744b5e696",
+						"id": "84ad67c3-e4eb-4635-abb6-2c39e9802c37",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -418,7 +370,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "67993dee-49ce-458b-a9b3-3b55b7bba800",
+						"id": "03eb9dd1-0efb-46ab-92e4-821038c5bf9d",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -458,7 +410,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "71f371d8-ddf9-4ea3-8be6-e796971134ec",
+						"id": "76f66459-faf2-4cea-bde0-99ebd933b83f",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -509,7 +461,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f068e507-df4a-4733-bb97-5c4a4b275301",
+						"id": "dd047b13-c119-4215-a99b-460c422a9329",
 						"exec": [
 							"pm.test(\"Status code is 202\", function () {\r",
 							"    pm.response.to.have.status(202);\r",
@@ -558,7 +510,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "71de9d51-afb3-4b69-8918-a45a11e685c0",
+						"id": "be684940-3ebd-4199-9673-c4f42486395e",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -596,7 +548,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9f12f86a-bd4d-4e8b-9ac1-5322f8927cc6",
+						"id": "19d6e990-9e08-492d-8234-a8a0b09539ff",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -658,7 +610,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "a851f602-0645-463c-bc97-6ddd1a3a73e7",
+				"id": "a803c4d7-4626-4b59-a467-d75b977a5296",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -668,7 +620,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b84c5368-03b0-4fae-9655-1e01ae91ad39",
+				"id": "008f08d9-5f31-4a23-bbcc-c86e468d84f1",
 				"type": "text/javascript",
 				"exec": [
 					""
